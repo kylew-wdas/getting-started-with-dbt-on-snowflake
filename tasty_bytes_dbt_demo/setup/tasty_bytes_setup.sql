@@ -1,19 +1,19 @@
-USE ROLE accountadmin;
+-- USE ROLE accountadmin;
 
-CREATE OR REPLACE WAREHOUSE tasty_bytes_dbt_wh
-    WAREHOUSE_SIZE = 'small'
-    WAREHOUSE_TYPE = 'standard'
-    AUTO_SUSPEND = 60
-    AUTO_RESUME = TRUE
-    INITIALLY_SUSPENDED = TRUE
-    COMMENT = 'warehouse for tasty bytes dbt demo';
+-- CREATE OR REPLACE WAREHOUSE tasty_bytes_dbt_wh
+--     WAREHOUSE_SIZE = 'small'
+--     WAREHOUSE_TYPE = 'standard'
+--     AUTO_SUSPEND = 60
+--     AUTO_RESUME = TRUE
+--     INITIALLY_SUSPENDED = TRUE
+--     COMMENT = 'warehouse for tasty bytes dbt demo';
 
-USE WAREHOUSE tasty_bytes_dbt_wh;
+-- USE WAREHOUSE tasty_bytes_dbt_wh;
 
-CREATE DATABASE IF NOT EXISTS tasty_bytes_dbt_db;
-CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.raw;
-CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.dev;
-CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.prod;
+-- CREATE DATABASE IF NOT EXISTS tasty_bytes_dbt_db;
+-- CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.raw;
+-- CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.dev;
+-- CREATE OR REPLACE SCHEMA tasty_bytes_dbt_db.prod;
 
 
 ALTER SCHEMA tasty_bytes_dbt_db.dev SET LOG_LEVEL = 'INFO';
